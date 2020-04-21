@@ -14,6 +14,7 @@ import prettierLogo from "./assets/prettierLogo.png";
 import eslintLogo from "./assets/eslintLogo.png";
 import typescriptLogo from "./assets/typescriptLogo.png";
 import emotionLogo from "./assets/emotionLogo.png";
+import cdn from "./assets/CDN.png";
 import styledComponentsLogo from "./assets/styledComponentsLogo.png";
 import howGatsbyWorks from "./assets/howGatsbyWorks.png";
 import reactLogo from "./assets/reactLogo.png";
@@ -47,6 +48,25 @@ import outOfTheBox from "./assets/outOfTheBox.png";
       </Flex>
       <Box>https://ohearonkg.dev</Box>
     </Flex>
+    <Flex sx={{ alignItems: "center", justifyContent: "space-between" }}>
+      <Flex sx={{ flex: "0 1 auto" }}>
+        <Flex sx={{ alignItems: "center", marginRight: "10px" }}>
+          <svg
+            style={{ width: "25px", height: "25px" }}
+            xmlns="http://www.w3.org/2000/svg"
+            width="1792"
+            height="1792"
+            viewBox="0 0 1792 1792"
+          >
+            <path
+              d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"
+              fill="#fff"
+            />
+          </svg>
+        </Flex>
+        <Box>ohearonkg@gmail.com</Box>
+      </Flex>
+    </Flex>
     <Flex sx={{ flex: "0 1 auto" }}>
       <Flex
         sx={{ flex: "0 0 25px", alignItems: "center", marginRight: "10px" }}
@@ -78,10 +98,18 @@ import outOfTheBox from "./assets/outOfTheBox.png";
   </Box>
   <Box sx={{ flex: "1 1 60%" }}>
     <ul>
-      <li> JavaScript Developer </li>
-      <li> Currently Unemployed (Covid 19) </li>
-      <li> Working with React past 3 years </li>
-      <li> Using Gatsby for personal sites past 6 months</li>
+      <li>
+        <h2>JavaScript Developer</h2>
+      </li>
+      <li>
+        <h2> Currently Unemployed (Covid 19)</h2>
+      </li>
+      <li>
+        <h2> Working with React past 3 years</h2>
+      </li>
+      <li>
+        <h2> Using Gatsby for personal sites past 6 months</h2>
+      </li>
     </ul>
   </Box>
 </Flex>
@@ -133,6 +161,22 @@ import outOfTheBox from "./assets/outOfTheBox.png";
     <img style={{ height: "100%" }} src={reactLogo} alt="react logo" />
   </Box>
 </Grid>
+
+---
+
+# Downsides
+
+<Steps>
+  <h2>Low SEO</h2>
+  <h2> Increased initial load time </h2>
+</Steps>
+
+<Notes>
+  <h2>Low SEO </h2>
+  <ul>
+    <li>if not implemented correctly</li>
+  </ul>
+</Notes>
 
 ---
 
@@ -190,28 +234,46 @@ import outOfTheBox from "./assets/outOfTheBox.png";
 
 # Benefits
 
-<Steps>
-  <h2>Reduced Complexity</h2>
-  <h2> Lower Costs </h2>
-  <h2> Better Performance </h2>
-</Steps>
+<Flex sx={{ alignItems: "center", padding: "20px" }}>
+  <Box sx={{ flex: "1 1 50%", marginRight: "40px", textAlign: "center" }}>
+    <h3> Content Delivery Network (CDN) </h3>
+    <img src={cdn} alt="CDN" />
+  </Box>
+  <Box sx={{ flex: "1 1 50%" }}>
+    <ul>
+      <Steps>
+        <li>
+          <h2>Reduced Complexity</h2>
+        </li>
+        <li>
+          <h2> Lower Costs </h2>
+        </li>
+        <li>
+          <h2> Better Performance </h2>
+        </li>
+      </Steps>
+    </ul>
+  </Box>
+</Flex>
 
 <Notes>
-  <h1>Reduced Complexity </h1>
-  <p>
-    No need to setup web servers. Instead, we're just serving assets from a CDN.
-  </p>
-  <p>
-    CDN is already globally available, no need to worry about:
+  <h2>Reduced Complexity </h2>
+  <ul>
+    <li>
+      No need to setup web servers. Instead, we're just serving assets from a
+      CDN.
+    </li>
+    <li>CDN is already globally available, no need to worry about:</li>
     <ul>
-      <li>Regions</li> <li>Availability zones</li>
+      <li>Regions</li>
+      <li>Availability zones</li>
     </ul>
-  </p>
-  <h1> Lower Costs </h1>
+  </ul>
+  <h2> Lower Costs </h2>
   <ul>
     <li>No servers (EC2. etc) in traditional server model </li>
   </ul>
-  <h1>Better Performance</h1>
+  <h2>Better Performance</h2>
   <ul>
     <li>Your assets are static, and cached.</li>
     <li>
@@ -240,6 +302,13 @@ import outOfTheBox from "./assets/outOfTheBox.png";
 
 <img style={{ height: "50vh" }} src={howGatsbyWorks} alt="how gatsby works" />
 
+<Notes>
+  <h2>
+    We take the hit at build time, so that we have statically rendered content
+    to serve to our users.
+  </h2>
+</Notes>
+
 ---
 
 # Technologies
@@ -257,12 +326,12 @@ import outOfTheBox from "./assets/outOfTheBox.png";
 
 # React
 
-<Flex>
+<Flex sx={{ alignItems: "center", padding: "20px" }}>
   <Box sx={{ flex: "1 1 50%" }}>
     <img style={{ maxHeight: "500px" }} src={reactLogo} alt="react logo" />
   </Box>
   <Box sx={{ flex: "1 1 50%" }}>
-    <ul style={{ textAlign: "left" }}>
+    <ul>
       <li>
         <h2>Painlessly create UI </h2>
       </li>
@@ -270,7 +339,7 @@ import outOfTheBox from "./assets/outOfTheBox.png";
         <h2>Reusable components</h2>
       </li>
       <li>
-        <h2>Large Ecosystem</h2>
+        <h2>Large ecosystem</h2>
       </li>
     </ul>
   </Box>
@@ -280,12 +349,12 @@ import outOfTheBox from "./assets/outOfTheBox.png";
 
 # GraphQL
 
-<Flex>
+<Flex sx={{ alignItems: "center", padding: "20px" }}>
   <Box sx={{ flex: "1 1 50%" }}>
     <img style={{ maxHeight: "500px" }} src={graphQLLogo} alt="GraphQL Logo" />
   </Box>
   <Box sx={{ flex: "1 1 50%" }}>
-    <ul style={{ textAlign: "left" }}>
+    <ul>
       <li>
         <h2>Ask for exactly what you need </h2>
       </li>
@@ -319,19 +388,29 @@ import outOfTheBox from "./assets/outOfTheBox.png";
 
 # Out of the Box
 
-<Box>
-  <img style={{ maxHeight: "500px" }} src={outOfTheBox} alt="box" />
-</Box>
-
----
-
-<h2>Code Splitting</h2>
-
-<Steps>
-  <h2>Preloading</h2>
-  <h2>Inlined CSS</h2>
-  <h2>Prefetching</h2>
-</Steps>
+<Flex sx={{ padding: "20px" }}>
+  <Box sx={{ flex: "1 1 50%", marginRight: "20px" }}>
+    <img style={{ maxHeight: "500px" }} src={outOfTheBox} alt="box" />
+  </Box>
+  <Box sx={{ flex: "1 1 50%" }}>
+    <ul>
+      <Steps>
+        <li>
+          <h2>Code Splitting</h2>
+        </li>
+        <li>
+          <h2>Preloading</h2>
+        </li>
+        <li>
+          <h2>Inlined CSS</h2>
+        </li>
+        <li>
+          <h2>Prefetching</h2>
+        </li>
+      </Steps>
+    </ul>
+  </Box>
+</Flex>
 
 <Notes>
   <h2>Code Splitting</h2>
@@ -356,8 +435,40 @@ import outOfTheBox from "./assets/outOfTheBox.png";
   <h2>Recipes</h2>
 </Steps>
 
+<Notes>
+  <h2>Plugins</h2>
+  <ul>
+    <li>Modularize site customizations for site specific functionality</li>
+    <li>Add external data</li>
+    <li>Transform data</li>
+  </ul>
+  <h2>Themes</h2>
+  <ul>
+    <li>
+      Using a Gatsby theme, all of your default configuration (shared
+      functionality, data sourcing, design) is abstracted out of your site, and
+      into an installable package.
+    </li>
+  </ul>
+  <h2>starters</h2>
+  <ul>
+    <li>
+      The Gatsby CLI tool lets you install starters, which are boilerplate
+      Gatsby sites maintained by the community and intended for jump-starting
+      development quickly.
+    </li>
+  </ul>
+  <h2>recipes</h2>
+</Notes>
+
 ---
 
 # What About Dynamic Apps
 
 <img style={{ maxHeight: "500px" }} src={hydrate} alt="hydrate" />
+
+---
+
+# Thank You
+
+### Questions
