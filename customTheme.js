@@ -11,6 +11,14 @@ export default {
     img: {
       height: "auto",
     },
+    Footer: {
+      bg: "primary",
+      padding: "20px",
+      color: "white",
+      fontSize: "1",
+      fontFamily: "body",
+      textAlign: "center",
+    },
   },
   fonts: {
     heading: '"Red Hat Text", sans-serif',
