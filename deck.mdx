@@ -1,10 +1,25 @@
-import { Text, Flex } from "theme-ui";
+import { Text, Flex, Grid, Box } from "theme-ui";
+
+import { Steps } from "mdx-deck";
 
 import customTheme from "./customTheme";
 export const theme = customTheme;
 
-import gatsbyLogoSVG from "./assets/gatsbyLogo.svg";
+import gatsbyLogoSVG from "./assets/gatsbyLogo.png";
+import kgBitmoji from "./assets/kgBitmoji.png";
 import basicStaticApp from "./assets/basicStaticApp.png";
+import twitterAppExample from "./assets/twitterAppExample.jpg";
+import facebookAppExample from "./assets/facebookAppExample.png";
+import prettierLogo from "./assets/prettierLogo.png";
+import eslintLogo from "./assets/eslintLogo.png";
+import typescriptLogo from "./assets/typescriptLogo.png";
+import emotionLogo from "./assets/emotionLogo.png";
+import styledComponentsLogo from "./assets/styledComponentsLogo.png";
+import howGatsbyWorks from "./assets/howGatsbyWorks.png";
+import reactLogo from "./assets/reactLogo.png";
+import graphQLLogo from "./assets/graphQLLogo.png";
+import hydrate from "./assets/hydrate.jpg";
+import outOfTheBox from "./assets/outOfTheBox.png";
 
 <Head>
   <title>Introduction To Gatsby </title>
@@ -22,7 +37,25 @@ import basicStaticApp from "./assets/basicStaticApp.png";
 
 # Introduction To Gatsby
 
-<img src={gatsbyLogoSVG} alt="gatsby logo." />
+<img style={{ height: "250px" }} src={gatsbyLogoSVG} alt="gatsby logo." />
+
+---
+
+# About Me
+
+<Flex sx={{ alignItems: "center" }}>
+  <Box sx={{ flex: "1 1 30%" }}>
+    <img src={kgBitmoji} alt="KG bitmoji" />
+  </Box>
+  <Box sx={{ flex: "1 1 60%" }}>
+    <ul>
+      <li> JavaScript Developer </li>
+      <li> Currently Unemployed (Covid 19) </li>
+      <li> Working with React past 3 years </li>
+      <li> Using Gatsby for personal sites past 6 months</li>
+    </ul>
+  </Box>
+</Flex>
 
 ---
 
@@ -34,22 +67,70 @@ import basicStaticApp from "./assets/basicStaticApp.png";
 
 # Dynamic Web Applications
 
-- Not prebuilt.
-- Fetch up to date data on page load.
-- More interactivity.
+<Flex sx={{ padding: "0 20px" }}>
+  <Box>
+    <img src={twitterAppExample} alt="twitter app example." />
+  </Box>
+  <Box sx={{ marginLeft: "25px" }}>
+    <img src={facebookAppExample} alt="facebook app example." />
+  </Box>
+</Flex>
+
+---
+
+<h1 style={{ textAlign: "center" }}> A New Way To Build Applications </h1>
+
+<Grid gap={2} columns="repeat(3, 250px)">
+  <Box>
+    <img src={prettierLogo} alt="prettier logo" />
+  </Box>
+  <Box>
+    <img src={eslintLogo} alt="eslint logo" />
+  </Box>
+  <Box>
+    <img src={typescriptLogo} alt="typescript logo" />
+  </Box>
+  <Box>
+    <img src={emotionLogo} alt="emotion logo" />
+  </Box>
+  <Box>
+    <img
+      style={{ background: "black" }}
+      src={styledComponentsLogo}
+      alt="styled components logo"
+    />
+  </Box>
+  <Box>
+    <img style={{ height: "100%" }} src={reactLogo} alt="react logo" />
+  </Box>
+</Grid>
 
 ---
 
 # What If
 
-We could use the modern tools we love to create
-better performing, more easily scaled, to build web sites
+<Notes>
+  We could use the modern tools we love to create better performing, more easily
+  scaled, to build web sites.
+</Notes>
 
 ---
 
-# Enter the JAM Stack
+<h1>
+  The <Text sx={{ color: "primary", display: "inline" }}>JAM</Text> Stack
+</h1>
 
-<Flex style={{ flexDirection: "column", alignItems: "flex-start" }}>
+---
+
+# What is The JAMStack
+
+<Flex
+  sx={{
+    flexDirection: "column",
+    alignItems: "flex-start",
+    fontSize: "4",
+  }}
+>
   <Flex>
     <Text sx={{ color: "primary", fontWeight: "bold" }}>J</Text>
     <Text>avaScript</Text>
@@ -68,7 +149,7 @@ better performing, more easily scaled, to build web sites
 
 # Philosophy
 
-<blockquote>
+<blockquote style={{ textAlign: "center" }}>
   <p>
     The JAMStack is an approach to web design that emphasizes shipping only
     static assets.
@@ -80,9 +161,11 @@ better performing, more easily scaled, to build web sites
 
 # Benefits
 
-- Reduced Complexity
-- Lower Costs
-- Better Performance
+<Steps>
+  <h2>Reduced Complexity</h2>
+  <h2> Lower Costs </h2>
+  <h2> Better Performance </h2>
+</Steps>
 
 <Notes>
   <h1>Reduced Complexity </h1>
@@ -109,3 +192,143 @@ better performing, more easily scaled, to build web sites
     <li> Just serve the static assets!</li>
   </ul>
 </Notes>
+
+---
+
+# Gatsby
+
+<blockquote style={{ textAlign: "center" }}>
+  <p>
+    Gatsby is a free and open source framework based on React that helps
+    developers build blazing fast websites and apps
+  </p>
+  <cite>- Gatsby Team </cite>
+</blockquote>
+
+---
+
+# How Does It Work
+
+<img style={{ height: "50vh" }} src={howGatsbyWorks} alt="how gatsby works" />
+
+---
+
+# Technologies
+
+<Flex>
+  <Box>
+    <img style={{ maxHeight: "500px" }} src={reactLogo} alt="react logo" />
+  </Box>
+  <Box>
+    <img style={{ maxHeight: "500px" }} src={graphQLLogo} alt="GraphQL Logo" />
+  </Box>
+</Flex>
+
+---
+
+# React
+
+<Flex>
+  <Box sx={{ flex: "1 1 50%" }}>
+    <img style={{ maxHeight: "500px" }} src={reactLogo} alt="react logo" />
+  </Box>
+  <Box sx={{ flex: "1 1 50%" }}>
+    <ul style={{ textAlign: "left" }}>
+      <li>
+        <h2>Painlessly create UI </h2>
+      </li>
+      <li>
+        <h2>Reusable components</h2>
+      </li>
+      <li>
+        <h2>Large Ecosystem</h2>
+      </li>
+    </ul>
+  </Box>
+</Flex>
+
+---
+
+# GraphQL
+
+<Flex>
+  <Box sx={{ flex: "1 1 50%" }}>
+    <img style={{ maxHeight: "500px" }} src={graphQLLogo} alt="GraphQL Logo" />
+  </Box>
+  <Box sx={{ flex: "1 1 50%" }}>
+    <ul style={{ textAlign: "left" }}>
+      <li>
+        <h2>Ask for exactly what you need </h2>
+      </li>
+      <li>
+        <h2>Powerful Developer tools </h2>
+      </li>
+      <li>
+        <h2>Get many resources in a single request </h2>
+      </li>
+    </ul>
+  </Box>
+</Flex>
+
+<Notes>
+  <h2> Ask for what you need </h2>
+  <ul>
+    <li> Request response shape is same </li>
+    <li> No over or under fetching </li>
+  </ul>
+  <h2> Developer Tools </h2>
+  <ul>
+    <li>GraphiQL</li>
+  </ul>
+  <h2> Many Resources Single Request </h2>
+  <ul>
+    <li> Eliminating N + 1 problem </li>
+  </ul>
+</Notes>
+
+---
+
+# Out of the Box
+
+<Box>
+  <img style={{ maxHeight: "500px" }} src={outOfTheBox} alt="box" />
+</Box>
+
+---
+
+<h2>Code Splitting</h2>
+
+<Steps>
+  <h2>Preloading</h2>
+  <h2>Inlined CSS</h2>
+  <h2>Prefetching</h2>
+</Steps>
+
+<Notes>
+  <h2>Code Splitting</h2>
+  <p>Per-route code splitting</p>
+  <h2> Preloading </h2>
+  <p> All critical resources are preloaded</p>
+  <h2> Inlined CSS </h2>
+  <p> Critical CSS is inlined in the head of the document</p>
+  <h2> Prefetching </h2>
+  <p> Hinting to the browser some content may be needed soon</p>
+  https://www.gatsbyjs.org/blog/2017-09-13-why-is-gatsby-so-fast/
+</Notes>
+
+---
+
+# Gatsby Internals
+
+<Steps>
+  <h2>Plugins</h2>
+  <h2>Themes</h2>
+  <h2>Starters</h2>
+  <h2>Recipes</h2>
+</Steps>
+
+---
+
+# What About Dynamic Apps
+
+<img style={{ maxHeight: "500px" }} src={hydrate} alt="hydrate" />
